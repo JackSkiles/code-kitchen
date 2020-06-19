@@ -5,12 +5,7 @@ export default class Recipes extends Component {
         super();
 
         this.state = {
-            recipes: [
-                {
-                    name: 'thing',
-                    review: 'description'
-                }
-            ],
+            recipes: [],
         }
     }
 
@@ -18,7 +13,7 @@ export default class Recipes extends Component {
         fetch('/api/v1/recipes')
             .then(res => res.json())
             .then(data => {
-                this.setState({ recipes: data})
+                this.setState({ recipes: data })
             })
     }
 
@@ -28,7 +23,7 @@ export default class Recipes extends Component {
                 { this.state.recipes.map(recipe => {
                     return (
                         <div>
-                            <pre>{ JSON.stringify(recipe, null, '\n') }</pre>
+                            <h1>{ recipe.name }</h1>
                         </div>
                     )
                 })}
