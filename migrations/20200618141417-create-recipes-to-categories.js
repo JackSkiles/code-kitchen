@@ -20,6 +20,8 @@ module.exports = {
       recipesId: {
         allowNull: false,
         type: Sequelize.INTEGER,
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
         references: {
           model: 'Recipes',
           key: 'id'
@@ -28,6 +30,8 @@ module.exports = {
       categoriesId: {
         allowNull: false,
         type: Sequelize.INTEGER,
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
         references: {
           model: 'Categories',
           key: 'id'

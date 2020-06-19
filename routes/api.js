@@ -67,4 +67,21 @@ router.post('/recipes', (req, res) => {
       })
 })
 
+router.delete('/recipes/:id', (req, res) => {
+  db.Recipes.destroy({
+    where: {
+      id: req.params.id
+    }
+  })  
+  .then(result => {
+    res.json({
+      message: 'Recipe was deleted'
+    })
+  })
+  .catch(err => {
+    res.status(400).json({ err: 'Invalid recipe' })
+  })
+})
+
+
 module.exports = router;
