@@ -1,13 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Recipes from './components/Recipes';
+import RecipeDetail from './components/RecipeDetail'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <Recipes />
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/" exact component={Recipes}/>
+          <Route path="/recipes/:id" component={RecipeDetail}/>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
