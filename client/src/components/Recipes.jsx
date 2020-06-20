@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 
+
 export default class Recipes extends Component {
     constructor() {
         super();
@@ -24,7 +25,7 @@ export default class Recipes extends Component {
             flexWrap: 'wrap',
             justifyContent: 'center'
         }
-        const card = {
+        const outerCard = {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
@@ -32,17 +33,31 @@ export default class Recipes extends Component {
             padding: '10px',
             border: 'solid 2px black',
             width: '30%',
-            margin: '10px'
+            margin: '10px',
+            backgroundColor: 'rgba(189, 232, 234)' 
+        }
+        const innerCard = {
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: '10px',
+            border: 'solid 2px black',
+            width: '90%',
+            margin: '10px',
+            backgroundColor: 'white'
         }
         return (
             <div>
                 { this.state.recipes.map(recipe => {
                     return (
                         <div style={container}>
-                            <div key={recipe.id}  style={card}>
+                            <div key={recipe.id}  style={outerCard}>
                                 <h2>{ recipe.name }</h2>
-                                <h4>{ recipe.review }</h4>
-                                <Link to={`/recipes/${recipe.id}`}>Show Details</Link>
+                                <div key={recipe.id} style={innerCard}>
+                                    <h4>{ recipe.review }</h4>
+                                    <Link to={`/recipes/${recipe.id}`}>Show Details</Link>
+                                </div>
                             </div>
                         </div>
                     )
