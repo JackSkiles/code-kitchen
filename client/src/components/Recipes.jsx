@@ -23,7 +23,7 @@ export default class Recipes extends Component {
             <div>
                 { this.state.recipes.map(recipe => {
                     return (
-                        <div>
+                        <div className="card">
                             <div key={recipe.id}>
                                 <h1>{ recipe.name }</h1>
                                 <h1>{ recipe.review }</h1>
