@@ -19,14 +19,29 @@ export default class Recipes extends Component {
     }
 
     render() {
+        const container = {
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center'
+        }
+        const card = {
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: '10px',
+            border: 'solid 2px black',
+            width: '30%',
+            margin: '10px'
+        }
         return (
             <div>
                 { this.state.recipes.map(recipe => {
                     return (
-                        <div className="card">
-                            <div key={recipe.id}>
-                                <h1>{ recipe.name }</h1>
-                                <h1>{ recipe.review }</h1>
+                        <div style={container}>
+                            <div key={recipe.id}  style={card}>
+                                <h2>{ recipe.name }</h2>
+                                <h4>{ recipe.review }</h4>
                                 <Link to={`/recipes/${recipe.id}`}>Show Details</Link>
                             </div>
                         </div>
