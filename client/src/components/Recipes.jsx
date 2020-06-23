@@ -8,6 +8,7 @@ export default class Recipes extends Component {
 
         this.state = {
             recipes: [],
+            removed: []
         }
     }
 
@@ -19,6 +20,23 @@ export default class Recipes extends Component {
             })
     }
 
+    remove = (indexToRemove) => {
+        console.log("Hello")
+        const removed = this.state.recipes.filter((recipes, index) => {
+          return index != indexToRemove;
+        })
+        this.setState({recipes: removed}, () => {
+          console.log(removed);
+        })
+    }
+
+    // remove = (indexToRemove) => {
+    //     fetch(`/api/v1/recipes/${indexToRemove}`)
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data)
+    //         })
+    // }
     render() {
         const container = {
             display: 'flex',
@@ -49,7 +67,7 @@ export default class Recipes extends Component {
         }
         return (
             <div>
-                { this.state.recipes.map(recipe => {
+                { this.state.recipes.map((recipe, index) => {
                     return (
                         <div style={container}>
                             <div key={recipe.id}  style={outerCard}>
@@ -57,6 +75,7 @@ export default class Recipes extends Component {
                                 <div key={recipe.id} style={innerCard}>
                                     <h4>{ recipe.review }</h4>
                                     <Link to={`/recipes/${recipe.id}`}>Show Details</Link>
+                                    <button type="submit" onClick={() => this.remove(index) }>Delete</button>
                                 </div>
                             </div>
                         </div>
