@@ -16,14 +16,19 @@ export default class Recipes extends Component {
         fetch('/api/v1/recipes')
             .then(res => res.json())
             .then(data => {
-                this.setState({ recipes: data })
+                this.setState({ recipes: data }, () => {
+                    console.log(this.state.recipes)
+                })
             })
     }
 
     remove = (indexToRemove) => {
         console.log("Hello")
+        fetch(`/api/v1/recipes/${this.state.recipes[indexToRemove].id}`, {
+            method: 'delete'
+        })
         const removed = this.state.recipes.filter((recipes, index) => {
-          return index != indexToRemove;
+            return index != indexToRemove;
         })
         this.setState({recipes: removed}, () => {
           console.log(removed);
