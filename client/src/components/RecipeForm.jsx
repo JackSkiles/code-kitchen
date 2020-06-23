@@ -6,14 +6,25 @@ export default class RecipeForm extends Component {
         name: '',
         url: '',
         description: '',
-        review: '',
+        review: 'review',
         vegetarian: false,
         vegan: false,
-        glutenFree: false
+        glutenfree: false
     }
 
-    handleFormSubmit = () => {
-
+    handleFormSubmit = (e) => {
+        e.preventDefault();
+        fetch('/api/v1/recipes', {
+            method: 'POST',
+            body: JSON.stringify(this.state),
+            headers: {
+                'Content-Type': 'application/json;charset=UTF-8'
+            },
+        })
+        .then(res => res.json())
+        .then(data => {
+            this.props.history.push(`/api/recipes/${data.id}`)
+        })
     }
 
     handleChange = (e) => {
@@ -51,15 +62,15 @@ export default class RecipeForm extends Component {
                     </div>
                     <div className={styles.formGroup}>
                         <ul>
-                            <li><label htmlFor="">vegetarian</label><input type="checkbox" name="vegetarian"
+                            <li><label htmlFor="vegetarian">vegetarian</label><input type="checkbox" id="vegetarian" name="vegetarian"
                              checked={this.state.vegetarian} onChange={this.handleCheckboxChange}></input></li>
                         </ul>
                         <ul>
-                            <li><label htmlFor="">vegan</label><input type="checkbox" name="vegan"
+                            <li><label htmlFor="vegan">vegan</label><input type="checkbox" id="vegan" name="vegan"
                              checked={this.state.vegan} onChange={this.handleCheckboxChange}></input></li>
                         </ul>
                         <ul>
-                            <li><label htmlFor="">GF</label><input type="checkbox" name="glutenFree"
+                            <li><label htmlFor="glutenfree">GF</label><input type="checkbox" id="glutenfree" name="glutenfree"
                              checked={this.state.glutenFree} onChange={this.handleCheckboxChange}></input></li>
                         </ul>
                     </div>
