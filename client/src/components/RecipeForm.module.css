@@ -1,0 +1,16 @@
+.RecipeForm {
+    background-color: aliceblue;
+    padding: 10px;
+    margin: 0 auto;
+    width: 500px;
+    max-width: 90%
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup label {
+    margin: 10px;
+}
