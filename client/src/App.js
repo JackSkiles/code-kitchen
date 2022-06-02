@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Recipes from './components/Recipes';
 import RecipeDetail from './components/RecipeDetail'
-import { BrowserRouter as Router, Switch, Route } from 'react-router';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import RecipeForm from './components/RecipeForm';
 
 function App() {
