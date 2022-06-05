@@ -1,0 +1,31 @@
+.innerContainer
+{
+    display: flex;
+    width: 80%;
+}
+
+.outerCard
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: solid 2px rgb(134, 134, 134);
+    width: 30%;
+    margin: 10px;
+    background-color: rgba(189 232 234)
+}
+
+.innerCard
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: solid 2px black;
+    width: 90%;
+    margin: 10px;
+    background-color: white
+}

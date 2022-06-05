@@ -52,6 +52,7 @@ export default class RecipeDetails extends Component {
       <div className="container">
         <div className="card"> 
         <h2 className="cardHeader">{ details.name }</h2>
+        <iframe src={`${ details.url }`} />
           <p className="cardText">{details.description}</p>
             <LikesButton id={details.id} />
         </div>
