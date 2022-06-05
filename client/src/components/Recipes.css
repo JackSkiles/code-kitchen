@@ -1,31 +1,38 @@
-.innerContainer
-{
+.innerContainer {
     display: flex;
-    width: 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
 }
 
-.outerCard
-{
+.outerCard {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 4px;
     padding: 10px;
-    border: solid 2px rgb(134, 134, 134);
+    border: solid 2px rgb(221, 221, 221);
     width: 30%;
     margin: 10px;
-    background-color: rgba(189 232 234)
+    background-color: hsl(209, 18%, 50%);
+
 }
 
-.innerCard
-{
+.innerCard {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    border: solid 2px black;
+    border: solid 2px rgb(243, 243, 243);
     width: 90%;
     margin: 10px;
     background-color: white
+}
+
+.cardHeader2
+{
+    color: white;
+    text-align: center;
 }

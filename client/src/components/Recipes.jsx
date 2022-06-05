@@ -52,7 +52,7 @@ export default class Recipes extends Component {
           {this.state.recipes.map(recipe => {
             return (
               <div key={recipe.id} className="outerCard" >
-                <h1>{recipe.name}</h1>
+                <h1 className="cardHeader2">{recipe.name}</h1>
                 <div className="innerCard">
                   <p>{recipe.description}</p>
                   <Link to={`/recipes/${recipe.id}`}>Show Details</Link>
