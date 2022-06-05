@@ -45,31 +45,31 @@ export default class Recipes extends Component {
       alignItems: 'center',
       justifyContent: 'center'
     }
-    
+
     return (
       <div style={container}>
-        <div className="infoCont">
-          <p className="infoText">Welcome to Code Kitchen, the full stack React app.
-          Click on submit review to save a review of recipes you find on the internet.
-          After submitting the review it can be viewed on the front page, and people can add likes to it. Have fun adding recipes!
-          </p>
-        </div>
-        <div className="innerContainer">
-          {this.state.recipes.map(recipe => {
-            return (
-              <div key={recipe.id} className="outerCard" >
-                <h1 className="cardHeader2">{recipe.name}</h1>
-                <div className="innerCard">
-                  <p>{recipe.description}</p>
-                  <Link to={`/recipes/${recipe.id}`}>Show Details</Link>
-                  <LikesButton id={recipe.id} />
+          <div className="infoCont">
+            <p className="infoText">Welcome to Code Kitchen, the full stack React app.
+              Click on submit review to save a review of recipes you find on the internet.
+              After submitting the review it can be viewed on the front page, and people can add likes to it. Have fun adding recipes!
+            </p>
+          </div>
+          <div className="innerContainer">
+            {this.state.recipes.map(recipe => {
+              return (
+                <div key={recipe.id} className="outerCard" >
+                  <h1 className="cardHeader2">{recipe.name}</h1>
+                  <div className="innerCard">
+                    <p>{recipe.description}</p>
+                    <Link to={`/recipes/${recipe.id}`}>Show Details</Link>
+                    <LikesButton id={recipe.id} />
+                  </div>
                 </div>
-              </div>
-            )
-          })}
+              )
+            })}
+          </div>
+          <Link to="/recipes/new">Submit a review</Link>
         </div>
-        <Link to="/recipes/new">Submit a review</Link>
-      </div>
     )
   }
 }
