@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-Content: center;
+}
+
+.card {
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        border: solid 2px rgb(163, 162, 162);
+        width: 30%;
+        margin: 10px;
+        font-size: 5vh;
+        border-radius: 8px;;
+        background-color: white;
+}
+
+.cardHeader
+{
+    font-size: 50px;
+}
+
+.cardText
+{
+    font-size: 20px;
+}

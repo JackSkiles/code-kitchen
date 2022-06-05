@@ -37,8 +37,8 @@ export default class LikesButton extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.increaseLikes}>
-          <span role="img" aria-label="Likes: ">👍</span> {this.state.likes}
+        <button onClick={this.increaseLikes} className="likesButton">
+          <span role="img" aria-label="Likes: " className="likesSpan">👍</span> {this.state.likes}
         </button>
       </div>
     )
