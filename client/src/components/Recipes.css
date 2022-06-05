@@ -36,3 +36,14 @@
     color: white;
     text-align: center;
 }
+
+.infoCont
+{
+    width: 40%;
+    background-color: grey;
+}
+
+.infoText
+{
+    text-align: center;
+}

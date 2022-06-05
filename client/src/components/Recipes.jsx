@@ -48,6 +48,12 @@ export default class Recipes extends Component {
     
     return (
       <div style={container}>
+        <div className="infoCont">
+          <p className="infoText">Welcome to Code Kitchen, the full stack React app.
+          Click on submit review to save a review of recipes you find on the internet.
+          After submitting the review it can be viewed on the front page, and people can add likes to it. Have fun adding recipes!
+          </p>
+        </div>
         <div className="innerContainer">
           {this.state.recipes.map(recipe => {
             return (
