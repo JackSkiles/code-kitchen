@@ -51,10 +51,10 @@ export default class RecipeForm extends Component {
             <label htmlFor="name">Recipe Name</label>
             <input type="text" id="name" name="name" value={this.state.name} onChange={this.handleChange}/>
           </div>
-          <div className={styles.formGroup}>
+          {/* <div className={styles.formGroup}>
             <label htmlFor="url">Recipe URL</label>
             <input type="text" id="url" name="url" value={this.state.url} onChange={this.handleChange}/>
-          </div>
+          </div> */}
           <div className={styles.formGroup}>
             <label htmlFor="description">Recipe Description</label>
             <textarea type="text" id="description" name="description" value={this.state.description} onChange={this.handleChange} />
