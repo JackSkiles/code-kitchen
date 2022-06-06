@@ -32,7 +32,7 @@ export default function Header(props) {
                             <h3 className="headerLink">Reviews</h3>
                         </div>
                     </Link>
-                    <Link to='portfolio' className="smallLinkCont">
+                    <Link to='/recipes/new' className="smallLinkCont">
                         <div>
                             <h3 className="headerLink">Submit Review</h3>
                         </div>

@@ -71,7 +71,7 @@ export default class Recipes extends Component {
             )
           })}
         </div>
-        <Link to="/recipes/new">Submit a review</Link>
+        {/* <Link to="/recipes/new">Submit a review</Link> */}
       </div>
     )
   }
