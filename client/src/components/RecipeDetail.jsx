@@ -18,7 +18,7 @@ export default class RecipeDetails extends Component {
   componentDidMount() {
     const { id } = this.props.match.params;
 
-    
+
     fetch(`/api/v1/recipes/${id}`)
       .then(res => res.json())
       .then(data => {
@@ -68,12 +68,16 @@ export default class RecipeDetails extends Component {
         <div className="card">
           <h2 className="cardHeader">{details.name}</h2>
           {/* <iframe src={`${details.url}`} /> */}
-          <p className="cardText">{details.review}</p>
-          <p className="cardText">{details.description}</p>
-          <p className="recipeText">{this.state.vegan}</p>
-          <p className="recipeText">{this.state.vegetarian}</p>
-          <p className="recipeText">{this.state.glutenFree}</p>
-          <LikesButton id={details.id} />
+          <div className="cardInfo">
+            <p className="cardText">{details.review}</p>
+            <p className="cardText">{details.description}</p>
+            <ul>
+              <p className="recipeText">{this.state.vegan}</p>
+              <p className="recipeText">{this.state.vegetarian}</p>
+              <p className="recipeText">{this.state.glutenFree}</p>
+            </ul>
+            <LikesButton id={details.id} />
+          </div>
         </div>
       </div>
     )

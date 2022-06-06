@@ -195,23 +195,32 @@
     display: flex;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1000px) {
     .logo {
-        width: 325px;
-        height: 210px;
+        /* width: 325px; */
+        /* height: 50px; */
+        font-size: 18px;
+        margin: 0px 0px 0px 10px;
     }
     .header {
         width: 100%;
     }
     .logoCont {
-        padding-right: 100px;
+        /* padding-right: 100px; */
         margin-left: 0;
+    }
+    .headerLink {
+        font-size: 2vh;
+    }
+    .linkCont
+    {
+        justify-content: space-between;
     }
     
 }
 
 @media screen and (max-width: 1250px){
-    .logo {
+    /* .logo {
         display: none;
     }
     .logo2 {
@@ -234,10 +243,10 @@
     }
     .linkCont {
         width: 75%;
-    }
+    } */
 }
 
-
+/* 
 @media screen and (max-width: 813px){
     .headerLink {
         font-size: 3.2vh;
@@ -246,8 +255,8 @@
         width: 66px;
         height: 50px;
     }
-}
-
+} */
+/* 
 @media screen and (max-width: 650px) {
     .logo2 {
         display: inline;
@@ -294,4 +303,4 @@
     .headerLink {
         font-size: 2.7vh;
     }
-}
+} */

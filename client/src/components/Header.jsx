@@ -38,11 +38,11 @@ export default function Header(props) {
                         </div>
                     </Link>
                 </div>
-                <div className="drop">
+                {/* <div className="drop">
                     <button className="dropDownButton" onClick={onClick}><div class="bar1"></div>
                         <div class="bar2"></div>
                         <div class="bar3"></div></button>
-                </div>
+                </div> */}
                 {/* <div className="dropDownMenu" id={dropToggle} >
                     <div className="dropItem"><Link to="portfolio"><h3 className="dropDownLink">Portfolio</h3></Link></div>
                     <div className="dropItem"><Link to="portfolio"><h3 className="dropDownLink">Products</h3></Link></div>

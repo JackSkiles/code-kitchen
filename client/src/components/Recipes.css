@@ -8,8 +8,9 @@
     flex-wrap: wrap;
     justify-content: center;
     background-color: rgb(248, 248, 248);
-    border-radius: 4px;
+    border-radius: 0px 0px 4px 4px;
     width: 80%;
+    margin: 0px 0px 100px 0px;
 }
 
 .outerCard {
@@ -21,13 +22,12 @@
     padding: 10px;
     /* border: solid 2px rgb(221, 221, 221); */
     box-shadow: -5px 5px 15px 2px rgb(190, 190, 190);
-    width: 20%;
+    background-color: hsl(209, 25%, 30%);
+    width: 25%;
     margin: 20px;
     height: 20vh;
     min-height: 300px;
     max-height: 500px;
-    background-color: hsl(209, 30%, 65%);
-
 }
 
 .innerCard {
@@ -101,14 +101,39 @@
 .infoCont
 {
     width: 40%;
-    padding: 10px 200px 10px 200px;
+    padding: 10px 20% 10px 20%;
     margin: 150px 0px 0px 0px;
     border-radius: 4px 4px 0px 0px;
-    background-color: hsl(209, 25%, 20%);
+    background-color: rgb(100, 122, 143);
+
 }
 
 .infoText
 {
     color: rgb(247, 247, 247);
     text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .infoText
+    {
+        font-size: 13px;
+        
+    }
+    .infoCont
+    {
+        padding: 10px 5% 10px 5%;
+        width: 80%;
+    }
+    .outerCard
+    {
+        width: 80%;
+    }
+    .innerContainer
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
 }
