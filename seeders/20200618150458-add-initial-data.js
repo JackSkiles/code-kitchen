@@ -29,10 +29,10 @@ module.exports = {
       }
     ]);
     await queryInterface.bulkInsert('Recipes', [{
-      name: 'The Meat Stick',
-      review: 'much meat',
-      description: 'a stick of meat',
-      url: 'http://meat.com',
+      name: 'Gyoza',
+      review: 'This is a great Gyoza recipe. The directions on frying then steaming were clear and concise. The only thing it needed was more salt.',
+      description: 'A great Gyoza recipe that will leave you wanting more. Also great for freezing.',
+      url: '',
       likes: 0,
       vegetarian: false,
       vegan: false,
@@ -42,25 +42,13 @@ module.exports = {
     }], {});
     await queryInterface.bulkInsert('Recipes', [{
       name: 'Bacon Pancakes',
-      review: 'Bacon pancakes makin bacon pancakes, take some bacon and you put it in a pancake',
-      description: 'They are pancakes cooked with bacon in them',
-      url: 'http://bCakes.com',
+      review: 'Great pancake recipe. Bacon in pancakes might take some getting used to, though. 4/5.',
+      description: 'It speaks for itself, they are pancakes cooked with bacon in them',
+      url: '',
       likes: 20,
       vegetarian: false,
       vegan: false,
       glutenfree: false,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    }], {});
-    await queryInterface.bulkInsert('Recipes', [{
-      name: 'Irohs Tea',
-      review: 'This tea is the best in Ba Sing Sei',
-      description: 'It is a good green tea.',
-      url: 'http://tea.com',
-      likes: 15,
-      vegetarian: true,
-      vegan: true,
-      glutenfree: true,
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
@@ -75,13 +63,8 @@ module.exports = {
       categoriesId: 1,
       createdAt: new Date(),
       updatedAt: new Date(),
-    },
-    {
-      recipesId: 3,
-      categoriesId: 4,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    }])
+    }
+    ])
   },
   down: (queryInterface, Sequelize) => {
     /*
