@@ -44,10 +44,10 @@ export default class Recipes extends Component {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center'
-    }
+  }
 
-    return (
-      <div style={container}>
+  return(
+      <div style = { container } id="main">
           <div className="infoCont">
             <p className="infoText">Welcome to Code Kitchen, the full stack React app.
               Click on submit review to save a review of recipes you find on the internet.
@@ -56,11 +56,13 @@ export default class Recipes extends Component {
           </div>
           <div className="innerContainer">
             {this.state.recipes.map(recipe => {
+              
               return (
                 <div key={recipe.id} className="outerCard" >
-                  <h1 className="cardHeader2">{recipe.name}</h1>
+                  <h2 className="cardHeader2">{recipe.name}</h2>
                   <div className="innerCard">
-                    <p>{recipe.description}</p>
+                    <p className="recipeText">{recipe.description}</p>
+                   
                     <Link to={`/recipes/${recipe.id}`}>Show Details</Link>
                     <LikesButton id={recipe.id} />
                   </div>

@@ -1,4 +1,7 @@
-
+#main
+{
+    background-color: hsl(209, 40%, 15%);
+}
 
 .innerContainer {
     display: flex;
@@ -18,9 +21,9 @@
     padding: 10px;
     /* border: solid 2px rgb(221, 221, 221); */
     box-shadow: -5px 5px 15px 2px rgb(190, 190, 190);
-    width: 30%;
+    width: 20%;
     margin: 20px;
-    height: 300px;
+    height: 200px;
     background-color: hsl(209, 30%, 65%);
 
 }
@@ -39,6 +42,11 @@
     background-color: white
 }
 
+.recipeText
+{
+    text-align: center;
+}
+
 .cardHeader2
 {
     color: white;
@@ -52,7 +60,7 @@
     padding: 10px 200px 10px 200px;
     margin: 150px 0px 0px 0px;
     border-radius: 4px 4px 0px 0px;
-    background-color: hsl(209, 18%, 20%);
+    background-color: hsl(209, 25%, 20%);
 }
 
 .infoText
