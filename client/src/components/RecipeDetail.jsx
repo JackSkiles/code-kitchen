@@ -65,18 +65,20 @@ export default class RecipeDetails extends Component {
 
     return (
       <div className="container">
-        <div className="card">
-          <h2 className="cardHeader">{details.name}</h2>
-          {/* <iframe src={`${details.url}`} /> */}
-          <div className="cardInfo">
-            <p className="cardText">{details.review}</p>
-            <p className="cardText">{details.description}</p>
-            <ul>
-              <p className="recipeText">{this.state.vegan}</p>
-              <p className="recipeText">{this.state.vegetarian}</p>
-              <p className="recipeText">{this.state.glutenFree}</p>
-            </ul>
-            <LikesButton id={details.id} />
+        <div className="innerContainer">
+          <div className="outerCard">
+            <h2 className="cardHeader">{details.name}</h2>
+            {/* <iframe src={`${details.url}`} /> */}
+            <div className="innerCard">
+              <p className="cardText">{details.review}</p>
+              <p className="cardText">{details.description}</p>
+              <ul>
+                <li className="recipeText">{this.state.vegan}</li>
+                <li className="recipeText">{this.state.vegetarian}</li>
+                <li className="recipeText">{this.state.glutenFree}</li>
+              </ul>
+              <LikesButton id={details.id} />
+            </div>
           </div>
         </div>
       </div>

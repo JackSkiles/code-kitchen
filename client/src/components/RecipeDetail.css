@@ -2,6 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-Content: center;
+    background-color: hsl(209, 40%, 15%);
+    height: 700px;
 }
 
 .card {
@@ -26,4 +28,10 @@
 .cardText
 {
     font-size: 20px;
+}
+
+.container > .innerContainer
+{
+    padding: 50px 0px 0px 0px; 
+    margin: 100px 0px 0px 0px;   
 }
