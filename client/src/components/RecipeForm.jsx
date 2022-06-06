@@ -65,15 +65,15 @@ export default class RecipeForm extends Component {
           </div>
           <div className={styles.formGroup}>
             <ul>
-              <li>
+              <li className='checkItem'>
                 <input type="checkbox" id="vegetarian" name="vegetarian" checked={this.state.vegetarian} onChange={this.handleCheckboxChange} />
                 <label htmlFor="vegetarian">Vegetarian</label>
               </li>
-              <li>
+              <li className='checkItem'>
                 <input type="checkbox" id="vegan" name="vegan" checked={this.state.vegan} onChange={this.handleCheckboxChange} />
                 <label htmlFor="vegan">Vegan</label>
               </li>
-              <li>
+              <li className='checkItem'>
                 <input type="checkbox" id="glutenfree" name="glutenfree" checked={this.state.glutenfree} onChange={this.handleCheckboxChange} />
                 <label htmlFor="glutenfree">Gluten Free</label>
               </li>

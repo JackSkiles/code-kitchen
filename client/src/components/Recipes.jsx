@@ -61,7 +61,7 @@ export default class Recipes extends Component {
               <div key={recipe.id} className="outerCard" >
                 <h2 className="cardHeader2">{recipe.name}</h2>
                 <div className="innerCard">
-                  <p className="recipeText">{recipe.review}</p>
+                  <p className="recipeText">{recipe.description}</p>
                   <div>
                     <LikesButton id={recipe.id} className="likes" />
                     <Link to={`/recipes/${recipe.id}`} className="recipeLink">Show Details</Link>

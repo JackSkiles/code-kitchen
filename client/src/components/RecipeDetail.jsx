@@ -10,7 +10,7 @@ export default class RecipeDetails extends Component {
       details: {},
       vegetarian: "Vegetarian",
       vegan: "Vegan",
-      glutenFree: "Gluten Free",
+      glutenFree: "GlutenFree",
       loading: true,
     }
   }
@@ -23,13 +23,13 @@ export default class RecipeDetails extends Component {
       .then(res => res.json())
       .then(data => {
         if (data.vegetarian != true) {
-          this.state.vegetarian = "Not vegetarian";
+          this.state.vegetarian = "notVegetarian";
         }
         if (data.vegan != true) {
-          this.state.vegan = "Not vegan"
+          this.state.vegan = "notVegan"
         }
         if (data.glutenfree != true) {
-          this.state.glutenFree = "Contains gluten"
+          this.state.glutenFree = "gluten"
         }
         this.setState({
           details: data,
@@ -56,6 +56,7 @@ export default class RecipeDetails extends Component {
     //     fontSize: '5vh',
     //     backgroundColor: 'white'
     // }
+    
     const { loading, details } = this.state;
 
     if (loading) {
@@ -71,11 +72,11 @@ export default class RecipeDetails extends Component {
             {/* <iframe src={`${details.url}`} /> */}
             <div className="innerCard">
               <p className="cardText">{details.review}</p>
-              <p className="cardText">{details.description}</p>
+              {/* <p className="cardText">{details.description}</p> */}
               <ul>
-                <li className="recipeText">{this.state.vegan}</li>
-                <li className="recipeText">{this.state.vegetarian}</li>
-                <li className="recipeText">{this.state.glutenFree}</li>
+                <li className={this.state.vegan}><img src={`../../${this.state.vegan}.png`} className="icon"></img>Vegan</li>
+                <li className={this.state.vegetarian}><img src={`../../${this.state.vegetarian}.png`} className="icon"></img>Vegetarian</li>
+                <li className={this.state.glutenFree}><img src={`../../${this.state.glutenFree}.png`} className="icon"></img>Gluten Free</li>
               </ul>
               <LikesButton id={details.id} />
             </div>

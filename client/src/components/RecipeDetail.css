@@ -3,35 +3,96 @@
     flex-wrap: wrap;
     justify-Content: center;
     background-color: hsl(209, 40%, 15%);
-    height: 700px;
+    height: 100vh;
 }
 
 .card {
     display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        border: solid 2px rgb(163, 162, 162);
-        width: 30%;
-        margin: 10px;
-        font-size: 5vh;
-        border-radius: 8px;;
-        background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: solid 2px rgb(163, 162, 162);
+    width: 50%;
+    margin: 10px;
+    font-size: 5vh;
+    border-radius: 8px;
+    ;
+    background-color: white;
 }
 
-.cardHeader
-{
+.cardHeader {
     font-size: 50px;
 }
 
-.cardText
-{
+.cardText {
     font-size: 20px;
 }
 
-.container > .innerContainer
-{
-    padding: 50px 0px 0px 0px; 
-    margin: 100px 0px 0px 0px;   
+.container>.innerContainer {
+    padding: 50px 0px 0px 0px;
+    margin: 100px 0px 0px 0px;
+    height: 80%;
+}
+
+.container>.innerContainer>.outerCard {
+    background-color: initial;
+    box-shadow: none;
+    width: 50%;
+}
+
+.container>.innerContainer>.outerCard>.innerCard {
+    background-color: initial;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.container>.innerContainer>.outerCard>.innerCard>ul {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.cardText {
+    text-align: center;
+    width: 100%;
+}
+
+.Vegetarian, .Vegan, .GlutenFree {
+    list-style-type: none;
+    background-color: rgb(233, 233, 233);
+    color: white;
+    text-decoration: none;
+}
+
+.notVegetarian, .notVegan, .gluten {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    background-color: rgb(233, 233, 233);
+    border-radius: 4px;
+    text-decoration: none;
+    border-radius: 2px;
+    padding: 5px 10px 5px 5px;
+    margin: 10px 0px 10px 0px;
+}
+
+
+.icon {
+    /* position: absolute; */
+    height: 25px;
+    width: 28px;
+    padding: 0px 5px 0px 5px;
+    /* left: 45.6%; */
+}
+
+.checkItem {
+    list-style-type: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .container>.innerContainer>.outerCard {
+        height: 100%;
+        /* justify-content: space-around; */
+    }
 }
